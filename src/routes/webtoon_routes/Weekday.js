@@ -1,10 +1,9 @@
-import Webtoon_data from 'components/Webtoon_data';
 import React from 'react';
 import {Link} from "react-router-dom";
 
 const Weekday = () => {
     return (
-    <div>Weekday
+    <div>
     {Navigation()}
     </div>
     );
@@ -12,7 +11,7 @@ const Weekday = () => {
 
 const Navigation = () => (
     <nav>
-        <ul>
+        <ul className="navi">
             <li>
                 <Link to="/webtoon/weekday">요일전체</Link>
             </li> 

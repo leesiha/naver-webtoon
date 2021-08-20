@@ -3,7 +3,7 @@ import {Link} from "react-router-dom";
 
 const Creation = () => {
     return (
-    <div>Creation
+    <div>
     {Navigation()}
     </div>
     );
@@ -11,7 +11,7 @@ const Creation = () => {
 
 const Navigation = () => (
     <nav>
-        <ul>
+        <ul className="navi">
             <li>
                 <Link to="/webtoon/creation">전체</Link>
             </li> 
