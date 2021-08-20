@@ -1,30 +1,27 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import {Link} from "react-router-dom";
-import axios from 'axios';
 
 const Webtoon = () => {
-    const [webtoons] = useState();
     return (
-    <div>Webtoon
+    <div>
     {Navigation()}
-    console.log({getWebtoon()});
-    </div>
-    );
-};
+    </div> 
+    )
+}
 
 const Navigation = () => (
     <nav>
-        <ul>
-            <li>
+        <ul className="navi">
+            <li className="weekday">
                 <Link to="/webtoon/weekday">요일별</Link>
             </li>
-            <li>
+            <li className="genre">
                 <Link to="/webtoon/genre">장르별</Link>
             </li>
-            <li>
+            <li className="creation">
                 <Link to="/webtoon/creation">작품별</Link>
             </li>
-            <li>
+            <li className="artist">
                 <Link to="/webtoon/artist">작가별</Link>
             </li>
             <li>
@@ -39,18 +36,5 @@ const Navigation = () => (
         </ul>
     </nav>
 )
-
-const getWebtoon = async () => { 
-    try { 
-        return await axios.get("/webtoon_data.json");
-    }catch (error) {
-        console.error(error);
-    }
-};
-
-
-
-
-
 
 export default Webtoon;

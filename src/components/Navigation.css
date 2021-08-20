@@ -1,7 +1,15 @@
-.title {
+.navi {
+    box-sizing: border-box;
     display:flex;
     font-size: 1rem;
-    outline: none;
-    border: none;
-    border-bottom: 1px solid #bd3535;
+    color: black;
+    border-top: 1px solid #c4c0c0;
+    border-bottom: 1px solid #c7c6c6;
+    padding: 1%;
+}
+
+.navi li {
+    margin-right: 1%;
+    margin-left: 1%;
+    display: flex;
 }

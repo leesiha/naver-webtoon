@@ -14,6 +14,9 @@ import Theme from 'routes/webtoon_routes/Theme';
 import Finish from 'routes/webtoon_routes/Finish';
 import Auth from 'routes/Auth';
 import Mypage from 'routes/Mypage';
+import Webtoon_data from './Webtoon_data';
+
+import "./Navigation.css";
 
 const AppRouter = ({ isLoggedIn }) => {
     return (
@@ -27,6 +30,7 @@ const AppRouter = ({ isLoggedIn }) => {
                     <Route path="/webtoon/weekday">
                         <Webtoon />
                         <Weekday />
+                        <Webtoon_data />
                     </Route> 
                     <Route path="/webtoon/genre">
                         <Webtoon />

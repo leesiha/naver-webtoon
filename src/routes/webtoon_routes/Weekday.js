@@ -1,3 +1,4 @@
+import Webtoon_data from 'components/Webtoon_data';
 import React from 'react';
 import {Link} from "react-router-dom";
 
@@ -39,5 +40,6 @@ const Navigation = () => (
         </ul>
     </nav>
 )
+
 
 export default Weekday;

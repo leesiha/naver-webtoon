@@ -3,7 +3,7 @@ import {Link} from "react-router-dom";
 
 const Challenge = () => {
     return (
-    <div>Challenge
+    <div>
     {Navigation()}
     </div>
     );

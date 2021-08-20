@@ -3,11 +3,11 @@ import {Link} from "react-router-dom";
 
 const Mypage = (isLoggedIn) => {
     return (
-    <div>Mypage
+    <div>
     {Navigation()}
     </div>
     );
-};
+}
 
 const Navigation = () => (
     <nav>
