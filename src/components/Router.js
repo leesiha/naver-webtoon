@@ -17,6 +17,7 @@ import Mypage from 'routes/Mypage';
 import Webtoon_data from './Webtoon_data';
 
 import "./Navigation.css";
+import webtoonData from 'webtoon_data';
 
 const AppRouter = ({ isLoggedIn }) => {
     return (
@@ -30,7 +31,10 @@ const AppRouter = ({ isLoggedIn }) => {
                     <Route path="/webtoon/weekday">
                         <Webtoon />
                         <Weekday />
-                        <Webtoon_data />
+                        {webtoonData.map((item, index) => (
+                            // 해당 Component에서 title, url, img를 props로 요구하므로 주입해주어야 합니다.
+                            <Webtoon_data img={item.img} title={item.title} url={item.url} key={`${index}listKey`} />
+                        ))}
                     </Route> 
                     <Route path="/webtoon/genre">
                         <Webtoon />
