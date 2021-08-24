@@ -5,6 +5,8 @@ const Weekday = () => {
     return (
     <div>
     {Navigation()}
+    <h3>이달의 신규 웹툰</h3>
+    <h3>요일별 전체 웹툰</h3>
     </div>
     );
 };

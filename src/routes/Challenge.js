@@ -11,7 +11,7 @@ const Challenge = () => {
 
 const Navigation = () => (
     <nav>
-        <ul>
+        <ul className="navi">
             <li>
                 <Link to="/bestChallenge">전체</Link>
             </li> 

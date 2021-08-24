@@ -15,9 +15,11 @@ import Finish from 'routes/webtoon_routes/Finish';
 import Auth from 'routes/Auth';
 import Mypage from 'routes/Mypage';
 import Webtoon_data from './Webtoon_data';
+import Home_data from './Home_data';
 
 import "./Navigation.css";
 import webtoonData from 'webtoon_data';
+import homeData from 'home_data';
 
 const AppRouter = ({ isLoggedIn }) => {
     return (
@@ -27,6 +29,9 @@ const AppRouter = ({ isLoggedIn }) => {
                 <>
                     <Route exact path="/">
                         <Home />
+                        {homeData.map((item) => (
+                            <Home_data img={item.img} title={item.title} thumb={item.thumb} url={item.url} />
+                        ))}
                     </Route>
                     <Route path="/webtoon/weekday">
                         <Webtoon />

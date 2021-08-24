@@ -4,6 +4,12 @@ import "./Navigation.css";
 
 const Navigation = () => (
     <nav>
+        <div className="header">
+            <a href="https://www.naver.com" title="NAVER" className="Ntxt_naver">NAVER</a>
+            <a href="/index" title="만화" className="Ntxt_comic">만화</a>
+            <em className="bar">|</em>
+            <a href="https://novel.naver.com" title="웹소설" className="Ntxt_novel">웹소설</a>
+        </div>
         <ul className="navi">
             <li className="home">
                 <Link to="/">홈</Link>
