@@ -13,20 +13,22 @@ const getHtml = async () => {
 getHtml() .then(html => { 
     let ulList = []; 
     const $ = cheerio.load(html.data); 
-    const $bodyList = $("div.list_area ul").children("li"); 
+    const $bodyList = $("div.webtoon_spot2 ul").children("li"); 
     
     $bodyList.each(function(i, elem) { 
         ulList[i] = { 
             id: $(this).find('a').attr('onclick'), 
-            title: $(this).find('a.title').text(), 
-            img: $(this).find('div.thumb a img').attr('src'),
-            url: $(this).find('div.thumb a').attr('href')
+            title: $(this).find('a strong').attr('title'), 
+            author: $(this).find('p.author2 a').attr('title'), 
+            intro: $(this).find('p').text(), 
+            img: $(this).find('div.thumb7 a img').attr('src'),
+            url: $(this).find('div.thumb7 a').attr('href')
         }; 
     }); 
     
-    const data = ulList.filter(n => n.title);
-    let jsondata = JSON.stringify(data);
-    fs.writeFileSync('webtoon_data.json', jsondata)
-    return console.log(jsondata);
+    //const data = ulList.filter(n => n.title);
+    let jsondata = JSON.stringify(ulList);
+    fs.writeFileSync('webtoon_spot2.json', jsondata)
+    return console.log(ulList);
 }) 
 .then(res => console.log(res));

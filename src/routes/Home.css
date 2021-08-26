@@ -1,0 +1,112 @@
+.webtoon_area {
+    float: left;
+    width: 582px;
+}
+
+.webtoon_lst {
+    position: relative;
+    padding: 0 20px 0 19px;
+    border-left: 1px solid #e5e5e5;
+    border-right: 1px solid #e5e5e5;
+}
+
+span.bigimg {
+    display: none;
+}
+.thumb:hover {
+    
+}
+
+.webtoon_lst .lst_area {
+    overflow: hidden;
+    width: 539px;
+    border-left: 1px solid #e5e5e5;
+    border-right: 1px solid #e5e5e5;
+}
+
+.webtoon_lst .lst_area li {
+    float: left;
+    width: 134px;
+    border-left: 1px solid #e5e5e5;
+}
+
+.btn_prev_arr, .btn_next_arr {
+    background-image: url(https://ssl.pstatic.net/static/comic/images/sp/sp_ico_0dc434f5.png);
+}
+
+.btn_prev_arr {
+    background-position: -173px -58px;
+    background-repeat: no-repeat;
+    width: 7px;
+    height: 13px;
+}
+.webtoon_lst .btn_prev {
+    left: 0;
+    width: 19px;
+}
+.webtoon_lst .btn_prev_arr {
+    margin-left: 6px;
+}
+.btn_next_arr {
+    background-position: -173px -75px;
+    background-repeat: no-repeat;
+    width: 7px;
+    height: 13px;
+}
+.webtoon_lst .btn_next {
+    right: 0;
+    width: 20px;
+}
+.webtoon_lst .btn_next_arr {
+    margin-left: 7px;
+}
+
+.webtoon_lst>a {
+    position: absolute;
+    top: 0;
+    height: 57px;
+}
+.webtoon_lst>a span {
+    display: block;
+    margin-top: 22px;
+    font-size: 0;
+    line-height: 0;
+}
+
+
+.webtoon_lst .lst_area li a {
+    position: relative;
+    display: block;
+    height: 57px;
+}
+
+.webtoon_lst .lst_area li:hover .sel_bar, .webtoon_lst .lst_area li.sel .sel_bar {
+    position: absolute;
+    z-index: 10;
+    left: -1px;
+    bottom: 0;
+    width: 136px;
+    height: 2px;
+    background: #222;
+}
+
+.comicList {
+    margin-left: 0px; 
+    width: 8640px;
+}
+
+.webtoon_lst .lst_area ul:after {
+    display: block;
+    clear: both;
+    content: '';
+}
+
+ul {
+    list-style: none;
+    display: block;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    padding-inline-start: 40px;
+}

@@ -5,13 +5,14 @@ import "./Webtoon_data.css";
 function Webtoon_data({ title, img, url, key }) {
   return (
     <div>
-      <a href="https://comic.naver.com/webtoon/list?titleId=183559&weekday=mon">
+      <a href={url}>
         <img src={img} />
         <h5>{title}</h5>
       </a>
     </div>
   );
 }
+
 
 
 
