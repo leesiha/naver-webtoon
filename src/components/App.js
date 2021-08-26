@@ -9,21 +9,21 @@ import Home_data from './Home_data';
 function App() {
   const [init, setInit] = useState("false");
   const [isLoggedIn, setIsLoggedIn ] = useState("false");
-  const [dat1, setDat1] = useState([]);
-  const [dat2, setDat2] = useState([]);
+  const [daily_all, setDaily_all] = useState([]);
+  const [webtoon_spot, setWebtoon_spot] = useState([]);
   const [focusedWebtoonName, setFocusedWebtoonName] = useState("");
 
   
   const getWebtoons = async () => {
     await axios
     .all([axios.get(
-      "https://raw.githubusercontent.com/leesiha/naver-webtoon/main/src/webtoon_data.json"
+      "https://raw.githubusercontent.com/leesiha/naver-webtoon/main/list_area%20daily_all.json"
       ), axios.get(
-      "https://raw.githubusercontent.com/leesiha/naver-webtoon/main/src/home_data.json"
+      "https://raw.githubusercontent.com/leesiha/naver-webtoon/main/webtoon_spot2.json"
     )]).then(
       axios.spread((res1, res2) => {
-        setDat1(res1.data);
-        setDat2(res2.data);
+        setDaily_all(res1.data);
+        setWebtoon_spot(res2.data);
       })
     )
   };
@@ -48,18 +48,7 @@ function App() {
   return (
     <div>
       {isLoggedIn && <input type="submit" value="Log out" onClick={logOut}/>}
-      {init ? <AppRouter isLoggedIn={isLoggedIn} dat1={dat1}>
-        <div className="list_area">
-          {dat1.map(dat => (
-            <Webtoon_data key={dat.id} id={dat.id} title={dat.title} url={dat.url} img={dat.img}/>
-          ))}
-        </div>
-
-        <div className="webtoon_area">
-          {dat2.map(dat => (
-            <Home_data title={dat.title} url={dat.url} img={dat.img} thumb={dat.thumb} focusedWebtoonName={focusedWebtoonName} setFocusedWebtoonName={setFocusedWebtoonName}/>
-          ))}
-        </div>
+      {init ? <AppRouter isLoggedIn={isLoggedIn} daily_all={daily_all} webtoon_spot={webtoon_spot}>
       </AppRouter>  : "Initializing..."}
     </div>
   )

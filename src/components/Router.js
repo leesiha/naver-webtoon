@@ -14,25 +14,21 @@ import Theme from 'routes/webtoon_routes/Theme';
 import Finish from 'routes/webtoon_routes/Finish';
 import Auth from 'routes/Auth';
 import Mypage from 'routes/Mypage';
-import Webtoon_data from './Webtoon_data';
-import Home_data from './Home_data';
 
 import "./Navigation.css";
 
-const AppRouter = ({ isLoggedIn, dat1 }) => {
+const AppRouter = ({ isLoggedIn, daily_all, webtoon_spot }) => {
     return (
         <Router>
             <Navigation/>
             <Switch>
                 <>
                     <Route exact path="/">
-                        {console.log(dat1)}
-                        
+                        <Home />
                     </Route>
                     <Route path="/webtoon/weekday">
                         <Webtoon />
                         <Weekday />
-                    
                     </Route> 
                     <Route path="/webtoon/genre">
                         <Webtoon />
