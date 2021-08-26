@@ -28,7 +28,7 @@ const AppRouter = ({ isLoggedIn, daily_all, webtoon_spot }) => {
                     </Route>
                     <Route path="/webtoon/weekday">
                         <Webtoon />
-                        <Weekday />
+                        <Weekday webtoon={daily_all} />
                     </Route> 
                     <Route path="/webtoon/genre">
                         <Webtoon />

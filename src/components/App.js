@@ -39,7 +39,7 @@ function App() {
       }
       setInit(true);
     });
-  }, [getWebtoons]);
+  }, []);
   
   const logOut = () => {
     setIsLoggedIn((prev) => !prev);
