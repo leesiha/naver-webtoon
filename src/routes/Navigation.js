@@ -1,29 +1,32 @@
 import React from "react";
 import {Link} from "react-router-dom";
-import "./Navigation.css";
+import "routes/Navigation.css";
 
 const Navigation = () => (
     <nav>
-        <div className="header">
+        <ul className="header">
+            <h1>
             <a href="https://www.naver.com" title="NAVER" className="Ntxt_naver">NAVER</a>
             <a href="/index" title="만화" className="Ntxt_comic">만화</a>
             <em className="bar">|</em>
             <a href="https://novel.naver.com" title="웹소설" className="Ntxt_novel">웹소설</a>
-        </div>
-        <ul className="navi">
-            <li className="home">
-                <Link to="/">홈</Link>
+            </h1>
+        </ul>
+        
+        <ul className="menu">
+            <li className="Ntxt_home">
+                <Link to="/" replace>홈</Link>
             </li>
-            <li className="weekday">
+            <li className="Ntxt_webtoon">
                 <Link to="/webtoon/weekday">웹툰</Link>
             </li>
-            <li className="bestChallenge">
+            <li className="Ntxt_best_challenge">
                 <Link to="/bestChallenge">베스트 도전</Link>
             </li>
-            <li className="challenge">
+            <li className="Ntxt_challenge_comic">
                 <Link to="/challenge">도전만화</Link>
             </li>
-            <li className="mypage">
+            <li className="Ntxt_mypage">
                 <Link to="/mypage">마이페이지</Link>
             </li>
         </ul>

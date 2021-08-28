@@ -1,16 +1,136 @@
-.navi {
-    list-style: none;
-    box-sizing: border-box;
-    display:flex;
-    font-size: 1rem;
-    color: black;
-    border-top: 1px solid #c4c0c0;
-    border-bottom: 1px solid #c7c6c6;
-    padding: 1%;
+body {
+  margin: 0px;
+}
+a {
+  text-decoration: none;
+  color: black;
+}
+ul {
+  margin: 0px;
+  padding: 0px;
+}
+.end_page {
+  position: relative;
+  height: 100%;
+  margin: 0 auto;
+  text-align: left;
 }
 
-.navi li {
-    margin-right: 1%;
-    margin-left: 1%;
-    display: flex;
+[class^="Ntxt"] {
+  font-family: Arial, "나눔고딕", NanumGothic, -apple-system, BlinkMacSystemFont,
+    "Apple SD Gothic Neo", "맑은고딕", MalgunGothic, "돋움", Dotum, Sans-serif;
+  display: flex;
+  flex-wrap: nowrap;
+  width: fit-content;
+  height: fit-content;
+}
+
+.header {
+  display: flex;
+  width: 960px;
+  margin: 0 auto;
+  padding: 10px 10px 8px 10px;
+}
+h1 {
+  position: relative;
+  display: flex;
+  z-index: 200;
+  float: left;
+  margin: 0px;
+  padding: 7px 30px 0 0;
+}
+.Ntxt_naver {
+  float: left;
+  color: #434343;
+  font-size: 15px;
+  margin-top: 6px;
+  font-weight: bold;
+}
+.Ntxt_comic {
+  margin-left: 6px;
+  font-size: 23px;
+  font-weight: bold;
+}
+.bar {
+  float: left;
+  overflow: hidden;
+  width: 1px;
+  height: 13px;
+  margin: 6px 10px 0 8px;
+  background-color: #d2d2d2;
+  line-height: 999px;
+  vertical-align: top;
+}
+.Ntxt_novel {
+  font-size: 15px;
+  font-weight: bold;
+  margin-top: 3px;
+  color: hsl(0, 0%, 50%);
+}
+
+.menu {
+  clear: both;
+  border-top: 1px solid #f2f2f2;
+  border-bottom: 1px solid #e5e5e5;
+  background: #fff;
+  padding: 0 10px;
+  display: flex;
+  width: 960px;
+  margin: 0px auto;
+}
+.menu li a {
+  display: inline-block;
+  height: 40px;
+  line-height: 40px;
+  padding: 0 15px;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.submenu {
+  display: flex;
+  border-bottom: 1px solid #ededed;
+  background: #fafafa;
+  padding: 0 10px;
+  width: 960px;
+  margin: 0 auto;
+}
+.submenu li a {
+  display: block;
+  height: 36px;
+  line-height: 36px;
+  padding: 0 14px;
+  font-size: 13px;
+}
+
+div.container {
+  clear: both;
+  position: relative;
+  width: 980px;
+  min-height: 100%;
+  padding: 8px 0 100px;
+  margin: 0 auto;
+}
+div.webtoon {
+  float: left;
+  position: relative;
+  width: 694px;
+  padding-left: 10px;
+}
+
+div.webtoon ul li.on a {
+  font-weight: bold;
+  color: #00c85e;
+  border-bottom: 2px solid #00d564;
+}
+div.webtoon ul li a {
+  display: inline-block;
+  font-size: 13px;
+  color: #606060;
+  margin-bottom: -1px;
+}
+.webtoon_spot2 ul li a strong {
+  color: #434343;
+  font-size: 12px;
+  line-height: 15px;
 }

@@ -3,9 +3,8 @@ import React, { useState } from 'react';
 import {Link} from "react-router-dom";
 import './Home.css'
 
-const Home = ({title, url, img, }) => {
+const Home = () => {
     const date = new Date();
-    const [focusedWebtoonName, setFocusedWebtoonName] = useState("");
 
     return (
     <div>

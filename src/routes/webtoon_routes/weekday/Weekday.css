@@ -1,0 +1,114 @@
+.daily_all {
+  display: flex;
+  justify-content: space-around;
+  font-size: 12px;
+  font-family: Arial, "나눔고딕", NanumGothic, -apple-system, BlinkMacSystemFont,
+    "Apple SD Gothic Neo", "맑은고딕", MalgunGothic, "돋움", Dotum, Sans-serif;
+  background: url(https://ssl.pstatic.net/static/comic/images/migration/webtoon/bg_dailytoon.gif)
+    repeat-y 0 0;
+}
+.daily_all h4 {
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+  color: #808080;
+}
+.daily_all div li div {
+  display: flex;
+  justify-content: center;
+}
+.img_list {
+  padding: 30px 0 5px;
+  border-bottom: 1px solid #eaeaea;
+  padding-left: 1px;
+  overflow: hidden;
+}
+.img_list li {
+  float: left;
+  width: 231px;
+  line-height: 17px;
+}
+.img_list li a img {
+  float: left;
+  margin-right: 11px;
+}
+.img_list li div {
+  float: left;
+  width: 124px;
+  height: 109px;
+  margin-top: 6px;
+}
+
+ul,
+li {
+  list-style: none;
+}
+
+li.webtoon {
+  width: 84px;
+  height: 110px;
+}
+
+div.webtoon_spot2 h3 {
+  overflow: hidden;
+  width: 693.997px;
+  height: 28px;
+  padding: 0;
+  margin: 0;
+  font-size: 16px;
+  line-height: 18px;
+  color: #222;
+}
+.sub_tit {
+  font-size: 16px;
+  line-height: 18px;
+  color: #222;
+  padding: 16px 0;
+  overflow: hidden;
+}
+div.webtoon_spot2 {
+  overflow: hidden;
+  width: 694px;
+  margin-top: 15px;
+  padding-bottom: 18px;
+}
+div.webtoon_spot2 ul {
+  display: flex;
+  overflow: hidden;
+  height: 207px;
+  font-size: 12px;
+  margin: 0;
+  padding: 0;
+  border: none;
+}
+div.webtoon_spot2 ul li:first-child {
+  margin-left: 0;
+}
+div.webtoon_spot2 ul li {
+  float: left;
+  width: 218px;
+  margin-left: 20px;
+  padding: 0px;
+}
+div.webtoon_spot2 ul li a {
+  padding: 0px;
+}
+div.webtoon_spot2 ul li a img {
+  margin-bottom: 11px;
+}
+div.webtoon_spot2 ul li a strong {
+  color: #434343;
+  line-height: 15px;
+}
+div.webtoon_spot2 ul li p.author2 {
+  width: auto;
+  margin: 0;
+  padding: 3px 0 0;
+  line-height: 16px;
+}
+div.webtoon_spot2 ul li p {
+  margin: 0;
+  padding: 6px 0 0;
+  line-height: 16px;
+  color: #434343;
+}

@@ -2,8 +2,9 @@ import React, { useEffect, useState } from 'react';
 import AppRouter from 'components/Router';
 import { authService } from "fbase";
 import axios from 'axios';
-import Webtoon_data from './Webtoon_data';
-import Home_data from './Home_data';
+import "routes/Navigation.css";
+
+
 
 
 function App() {
@@ -11,7 +12,8 @@ function App() {
   const [isLoggedIn, setIsLoggedIn ] = useState("false");
   const [daily_all, setDaily_all] = useState([]);
   const [webtoon_spot, setWebtoon_spot] = useState([]);
-  const [focusedWebtoonName, setFocusedWebtoonName] = useState("");
+  const [isOn, setOn] = useState("false");
+
 
   
   const getWebtoons = async () => {
@@ -45,8 +47,12 @@ function App() {
     setIsLoggedIn((prev) => !prev);
   }
 
+  const handleOn = () => {
+    setOn("true");
+};
+
   return (
-    <div>
+    <div id="wrap" className="end_page">
       {isLoggedIn && <input type="submit" value="Log out" onClick={logOut}/>}
       {init ? <AppRouter isLoggedIn={isLoggedIn} daily_all={daily_all} webtoon_spot={webtoon_spot}>
       </AppRouter>  : "Initializing..."}
