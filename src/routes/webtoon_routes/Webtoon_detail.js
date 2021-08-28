@@ -1,9 +1,7 @@
 import React, { useState } from "react";
 import { Link, Route, Switch, Router } from "react-router-dom";
-import "routes/webtoon_routes/weekday/Weekday.css";
-import "routes/Navigation.css";
 
-const Weekday = ({ webtoon, Nwebtoon }) => {
+const Webtoon_detail = ({ webtoon, Nwebtoon }) => {
   return (
     <>
       {Navigation()}
@@ -140,31 +138,31 @@ const Navigation = () => {
   return (
     <ul className="category_tab">
       <li className="on">
-        <Link to="/webtoon/weekday">요일전체</Link>
+        <Link to="/webtoon/Webtoon_detail">요일전체</Link>
       </li>
       <li>
-        <Link to="/webtoon/weekday/mon">월요웹툰</Link>
+        <Link to="/webtoon/Webtoon_detail/mon">월요웹툰</Link>
       </li>
       <li>
-        <Link to="/webtoon/weekday/tue">화요웹툰</Link>
+        <Link to="/webtoon/Webtoon_detail/tue">화요웹툰</Link>
       </li>
       <li>
-        <Link to="/webtoon/weekday/wed">수요웹툰</Link>
+        <Link to="/webtoon/Webtoon_detail/wed">수요웹툰</Link>
       </li>
       <li>
-        <Link to="/webtoon/weekday/thu">목요웹툰</Link>
+        <Link to="/webtoon/Webtoon_detail/thu">목요웹툰</Link>
       </li>
       <li>
-        <Link to="/webtoon/weekday/fri">금요웹툰</Link>
+        <Link to="/webtoon/Webtoon_detail/fri">금요웹툰</Link>
       </li>
       <li>
-        <Link to="/webtoon/weekday/sat">토요웹툰</Link>
+        <Link to="/webtoon/Webtoon_detail/sat">토요웹툰</Link>
       </li>
       <li>
-        <Link to="/webtoon/weekday/sun">일요웹툰</Link>
+        <Link to="/webtoon/Webtoon_detail/sun">일요웹툰</Link>
       </li>
     </ul>
   );
 };
 
-export default Weekday;
+export default Webtoon_detail;

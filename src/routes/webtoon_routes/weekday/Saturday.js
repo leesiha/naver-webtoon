@@ -13,10 +13,10 @@ const Saturday = ({ webtoon, Nwebtoon }) => {
           {Nwebtoon.map((singleData) => {
             return (
               <li>
-                <a href={singleData.url}>
+                <Link to={singleData.url}>
                   <img src={singleData.img} alt="thumb7" />
                   <strong>{singleData.title}</strong>
-                </a>
+                </Link>
                 <p className="author">{singleData.author}</p>
                 <p>{singleData.intro}</p>
               </li>
@@ -32,9 +32,9 @@ const Saturday = ({ webtoon, Nwebtoon }) => {
             .map((singleData) => {
               return (
                 <li>
-                  <a href={singleData.url}>
+                  <Link to={singleData.url}>
                     <img src={singleData.img} />
-                  </a>
+                  </Link>
                   <div>{singleData.title}</div>
                 </li>
               );

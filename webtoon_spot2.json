@@ -1,1 +1,26 @@
-[{"id":"nclk_v2(event,'mom.thum','778329','1')","title":"바퀴","author":"나우원 / 오른손","intro":"\n\t\t\t\t\t\t\t나우원 / 오른손“내 몸이 변하는 순간, 온 세상 사람들의 표적이 되었다.” 신체가 점점...  ","img":"https://shared-comic.pstatic.net/thumb/webtoon/778329/thumbnail/thumbnail_IMAG04_84cb3f85-1129-4ba4-a407-2974e41c857b.jpg","url":"/webtoon/detail?titleId=778329&no=1"},{"id":"nclk_v2(event,'mom.thum','778153','2')","title":"유미의 세포들 외전 : 프로 직장인","author":"이동건","intro":"\n\t\t\t\t\t\t\t이동건<유미의 세포들> 드라마화 기념 특별외전. ‘대한국수’ 회사원 시절 유...  ","img":"https://shared-comic.pstatic.net/thumb/webtoon/778153/thumbnail/thumbnail_IMAG04_4ddf6633-89b5-46b6-a65c-ee3dcf73693b.jpg","url":"/webtoon/detail?titleId=778153&no=2"},{"id":"nclk_v2(event,'mom.thum','777829','3')","title":"지구식 구원자 전형","author":"외투 / 하정수","intro":"\n\t\t\t\t\t\t\t외투 / 하정수지구의 폐쇄 안내와 게이트를 통해 등장하는 끔찍한 존재들. 인간의 존엄...  ","img":"https://shared-comic.pstatic.net/thumb/webtoon/777829/thumbnail/thumbnail_IMAG04_a3b15d45-80ad-4720-89af-3767d64bd26d.jpg","url":"/webtoon/detail?titleId=777829&no=2"}]
+[
+  {
+    "id": "nclk_v2(event,'mom.thum','778329','1')",
+    "title": "바퀴",
+    "author": "나우원 / 오른손",
+    "intro": "“내 몸이 변하는 순간, 온 세상 사람들의 표적이 되었다.” 신체가 점점... ",
+    "img": "https://shared-comic.pstatic.net/thumb/webtoon/778329/thumbnail/thumbnail_IMAG04_84cb3f85-1129-4ba4-a407-2974e41c857b.jpg",
+    "url": "/webtoon/detail?titleId=778329&no=1"
+  },
+  {
+    "id": "nclk_v2(event,'mom.thum','778153','2')",
+    "title": "유미의 세포들 외전 : 프로 직장인",
+    "author": "이동건",
+    "intro": "<유미의 세포들> 드라마화 기념 특별외전. ‘대한국수’ 회사원 시절 유... ",
+    "img": "https://shared-comic.pstatic.net/thumb/webtoon/778153/thumbnail/thumbnail_IMAG04_4ddf6633-89b5-46b6-a65c-ee3dcf73693b.jpg",
+    "url": "/webtoon/detail?titleId=778153&no=2"
+  },
+  {
+    "id": "nclk_v2(event,'mom.thum','777829','3')",
+    "title": "지구식 구원자 전형",
+    "author": "외투 / 하정수",
+    "intro": "지구의 폐쇄 안내와 게이트를 통해 등장하는 끔찍한 존재들. 인간의 존엄... ",
+    "img": "https://shared-comic.pstatic.net/thumb/webtoon/777829/thumbnail/thumbnail_IMAG04_a3b15d45-80ad-4720-89af-3767d64bd26d.jpg",
+    "url": "/webtoon/detail?titleId=777829&no=2"
+  }
+]
