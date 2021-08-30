@@ -21,7 +21,6 @@ import Finish from "routes/webtoon_routes/Finish";
 import Auth from "routes/Auth";
 import Mypage from "routes/Mypage";
 
-import "./Router.css";
 import Monday from "routes/webtoon_routes/weekday/Monday";
 import Tuesday from "routes/webtoon_routes/weekday/Tuesday";
 import Wendnesday from "routes/webtoon_routes/weekday/Wendnesday";
@@ -31,7 +30,7 @@ import Saturday from "routes/webtoon_routes/weekday/Saturday";
 import Sunday from "routes/webtoon_routes/weekday/Sunday";
 import Webtoon_detail from "routes/webtoon_routes/Webtoon_detail";
 
-const AppRouter = ({ isLoggedIn, daily_all, webtoon_spot }) => {
+const AppRouter = ({ isLoggedIn, daily_all, webtoon_spot, webtoon_detail }) => {
   return (
     <Router>
       <Navigation />
@@ -48,8 +47,18 @@ const AppRouter = ({ isLoggedIn, daily_all, webtoon_spot }) => {
                   <div className="webtoon">
                     <>
                       <Route exact path="/webtoon/weekday">
-                        <Weekday webtoon={daily_all} Nwebtoon={webtoon_spot} />
+                        <Weekday
+                          webtoon={daily_all}
+                          Nwebtoon={webtoon_spot}
+                          detail={webtoon_detail}
+                        />
                       </Route>
+                      {/* <Route path="/webtoon/list" component={Webtoon_detail}>
+                        <Webtoon_detail
+                          detail={webtoon_detail}
+                          webtoon={daily_all}
+                        />
+                      </Route> */}
                       <Route exact path="/webtoon/weekday/mon">
                         <Monday webtoon={daily_all} Nwebtoon={webtoon_spot} />
                       </Route>

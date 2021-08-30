@@ -1,12 +1,8 @@
-import React from 'react';
-import {Link} from "react-router-dom";
-import "components/Navigation.css";
+import React from "react";
+import { Link } from "react-router-dom";
 
 const Theme = () => {
-    return (
-    <div>Theme
-    </div>
-    );
+  return <div>Theme</div>;
 };
 
 export default Theme;

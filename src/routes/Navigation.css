@@ -1,150 +1,152 @@
-body{
-    margin: 0px;
+body {
+  margin: 0px;
 }
 a {
-    text-decoration: none;
-    color: black;
+  text-decoration: none;
+  color: black;
 }
 ul {
-    margin: 0px;
-    padding: 0px;
+  margin: 0px;
+  padding: 0px;
 }
 .end_page {
-    flex-wrap: nowrap;
-    height: 300px;
-    margin: 0 auto;
-    text-align: left;
+  flex-wrap: nowrap;
+  height: 300px;
+  margin: 0 auto;
+  text-align: left;
 }
 
-[class^=Ntxt] {
-    font-family: Arial,'나눔고딕',NanumGothic,-apple-system,BlinkMacSystemFont,'Apple SD Gothic Neo','맑은고딕',MalgunGothic,'돋움',Dotum,Sans-serif;
-    display: flex;
-    flex-wrap: nowrap;
-    width:fit-content;
-    height:fit-content;
+[class^="Ntxt"] {
+  font-family: Arial, "나눔고딕", NanumGothic, -apple-system, BlinkMacSystemFont,
+    "Apple SD Gothic Neo", "맑은고딕", MalgunGothic, "돋움", Dotum, Sans-serif;
+  display: flex;
+  flex-wrap: nowrap;
+  width: fit-content;
+  height: fit-content;
 }
 
 .header {
-    display: flex;
-    width: 960px;
-    margin: 0 auto;
-    padding: 10px 10px 8px 10px;
+  display: flex;
+  width: 960px;
+  margin: 0 auto;
+  padding: 10px 10px 8px 10px;
 }
 h1 {
-    position: relative;
-    display: flex;
-    z-index: 200;
-    float: left;
-    margin: 0px;
-    padding: 7px 30px 0 0;
+  position: relative;
+  display: flex;
+  z-index: 200;
+  float: left;
+  margin: 0px;
+  padding: 7px 30px 0 0;
 }
 .Ntxt_naver {
-    float: left;
-    color: #434343;
-    font-size: 15px;
-    margin-top: 6px;
-    font-weight: bold;
+  float: left;
+  color: #434343;
+  font-size: 15px;
+  margin-top: 6px;
+  font-weight: bold;
 }
 .Ntxt_comic {
-    margin-left: 6px;
-    font-size: 23px;
-    font-weight:bold;
+  margin-left: 6px;
+  font-size: 23px;
+  font-weight: bold;
 }
 .bar {
-    float: left;
-    overflow: hidden;
-    width: 1px;
-    height: 13px;
-    margin: 6px 10px 0 8px;
-    background-color: #d2d2d2;
-    line-height: 999px;
-    vertical-align: top;
+  float: left;
+  overflow: hidden;
+  width: 1px;
+  height: 13px;
+  margin: 6px 10px 0 8px;
+  background-color: #d2d2d2;
+  line-height: 999px;
+  vertical-align: top;
 }
 .Ntxt_novel {
-    font-size: 15px;
-    font-weight:bold;
-    margin-top: 3px;
-    color: hsl(0, 0%, 50%);
+  font-size: 15px;
+  font-weight: bold;
+  margin-top: 3px;
+  color: hsl(0, 0%, 50%);
 }
 
-.menu{
-    clear: both;
-    border-top: 1px solid #f2f2f2;
-    border-bottom: 1px solid #e5e5e5;
-    background: #fff;
-    padding: 0 10px;
-    display: flex;
-    width: 960px;
-    margin: 0px auto;
+.menu {
+  clear: both;
+  border-top: 1px solid #f2f2f2;
+  border-bottom: 1px solid #e5e5e5;
+  background: #fff;
+  padding: 0 10px;
+  display: flex;
+  width: 960px;
+  margin: 0px auto;
 }
 .menu li a {
-    display: inline-block;
-    height: 40px;
-    line-height: 40px;
-    padding: 0 15px;
-    font-size: 14px;
-    font-weight: bold;
+  display: inline-block;
+  height: 40px;
+  line-height: 40px;
+  padding: 0 15px;
+  font-size: 14px;
+  font-weight: bold;
 }
 
 .submenu {
-    display: flex;
-    border-bottom: 1px solid #ededed;
-    background: #fafafa;
-    padding: 0 10px;
-    width: 960px;
-    margin: 0 auto;
+  display: flex;
+  border-bottom: 1px solid #ededed;
+  background: #fafafa;
+  padding: 0 10px;
+  width: 960px;
+  margin: 0 auto;
 }
 .submenu li a {
-    display: block;
-    height: 36px;
-    line-height: 36px;
-    padding: 0 14px;
-    font-size: 13px;
+  display: block;
+  height: 36px;
+  line-height: 36px;
+  padding: 0 14px;
+  font-size: 13px;
 }
 
-div.container{
-    clear: both;
-    position: relative;
-    width: 980px;
-    min-height: 100%;
-    padding: 8px 0 100px;
-    margin: 0 auto;
+div.container {
+  clear: both;
+  position: relative;
+  width: 980px;
+  min-height: 100%;
+  padding: 8px 0 100px;
+  margin: 0 auto;
 }
 div.webtoon {
-    float: left;
-    position: relative;
-    width: 694px;
-    padding-left: 10px;
+  float: left;
+  position: relative;
+  width: 694px;
+  padding-left: 10px;
 }
-div.webtoon h3{
-    margin-top: 29px;
-    position: relative;
-    padding-bottom: 8px;
-    margin: 22px 0 0;
-    border-bottom: 1px solid #eaeaea;
-    zoom: 1;
-    font-size: 16px;
+div.webtoon h3 {
+  margin-top: 29px;
+  position: relative;
+  padding-bottom: 8px;
+  margin: 22px 0 0;
+  border-bottom: 1px solid #eaeaea;
+  zoom: 1;
+  font-size: 16px;
 }
 div.webtoon ul {
-    font-family: Arial,'나눔고딕',NanumGothic,-apple-system,BlinkMacSystemFont,'Apple SD Gothic Neo','맑은고딕',MalgunGothic,'돋움',Dotum,Sans-serif;
-    display: flex;
-    border-bottom: 1px solid #e5e5e5;
-    margin-top: 16px;
-    font-size: 12px;
+  font-family: Arial, "나눔고딕", NanumGothic, -apple-system, BlinkMacSystemFont,
+    "Apple SD Gothic Neo", "맑은고딕", MalgunGothic, "돋움", Dotum, Sans-serif;
+  display: flex;
+  border-bottom: 1px solid #e5e5e5;
+  margin-top: 16px;
+  font-size: 12px;
 }
 div.webtoon ul li {
-    float: left;
-    padding: 0 7px;
+  float: left;
+  padding: 0 7px;
 }
 div.webtoon ul li.on a {
-    font-weight: bold;
-    color: #00c85e;
-    border-bottom: 2px solid #00d564;
+  font-weight: bold;
+  color: #00c85e;
+  border-bottom: 2px solid #00d564;
 }
 div.webtoon ul li a {
-    display: inline-block;
-    font-size: 12px;
-    color: #606060;
-    padding: 0 2px 9px;
-    margin-bottom: -1px;
+  display: inline-block;
+  font-size: 12px;
+  color: #606060;
+  padding: 0 2px 9px;
+  margin-bottom: -1px;
 }
