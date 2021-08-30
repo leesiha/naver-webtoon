@@ -5,7 +5,6 @@ import "routes/Navigation.css";
 
 const Monday = ({ webtoon, thumb_b }) => {
   const date = new Date();
-  const result = webtoon.map((item, index) => ({ ...item, ...thumb_b[index] }));
   return (
     <>
       {Navigation()}
@@ -17,7 +16,7 @@ const Monday = ({ webtoon, thumb_b }) => {
           </p>
         </h3>
         <ul>
-          {result.map((singleData) => {
+          {webtoon.map((singleData) => {
             return (
               <li>
                 <Link to={singleData.url_to_list}>
