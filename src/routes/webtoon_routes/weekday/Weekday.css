@@ -1,16 +1,60 @@
-.daily_all {
-  display: flex;
-  justify-content: space-around;
+body,
+input,
+textarea,
+select,
+button,
+table {
   font-size: 12px;
   font-family: Arial, "나눔고딕", NanumGothic, -apple-system, BlinkMacSystemFont,
     "Apple SD Gothic Neo", "맑은고딕", MalgunGothic, "돋움", Dotum, Sans-serif;
+  color: #434343;
+}
+div,
+p,
+span,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+ul,
+ol,
+li,
+dl,
+dt,
+dd,
+table,
+tr,
+th,
+td,
+form,
+fieldset,
+legend,
+select,
+textarea,
+label {
+  margin: 0;
+  padding: 0;
+}
+ul,
+ol,
+li,
+dl,
+dt,
+dd {
+  list-style: none;
+}
+.daily_all {
+  display: flex;
+  justify-content: space-around;
   background: url(https://ssl.pstatic.net/static/comic/images/migration/webtoon/bg_dailytoon.gif)
     repeat-y 0 0;
 }
 .daily_all h4 {
   display: flex;
   justify-content: center;
-  margin-top: 10px;
+  margin: 10px 0;
   color: #808080;
 }
 .daily_all div li div {
@@ -32,16 +76,26 @@
   float: left;
   margin-right: 11px;
 }
-.img_list li div {
+.img_list li dl {
   float: left;
   width: 124px;
   height: 109px;
   margin-top: 6px;
+  margin-bottom: 0;
 }
-
-ul,
-li {
-  list-style: none;
+.img_list li dt {
+  display: table;
+  font-weight: bold;
+}
+dd.more {
+  margin-top: 28px;
+  display: inline-block;
+  padding: 0 4px 0 1px;
+  background: url(https://ssl.pstatic.net/static/comic/images/migration/webtoon/ico_r_arrow.gif)
+    no-repeat right 6px;
+  font-size: 11px;
+  color: #767676;
+  letter-spacing: -1px;
 }
 
 li.webtoon {

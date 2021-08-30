@@ -28,14 +28,24 @@ const Friday = ({ webtoon, Nwebtoon }) => {
       <div className="list_area daily_img">
         <div className="img_list">
           {webtoon
-            .filter((element) => element.id.includes("thm*f"))
+            .filter((element) => element.parse.includes("thm*f"))
             .map((singleData) => {
               return (
                 <li>
-                  <Link to={singleData.url}>
-                    <img src={singleData.img} />
+                  <Link to={singleData.url_to_list}>
+                    <img src={singleData.thumb_s} />
                   </Link>
-                  <div>{singleData.title}</div>
+                  <dl>
+                    <dt>
+                      <Link>{singleData.title}</Link>
+                    </dt>
+                    <dd className="desc">
+                      <Link>{singleData.author}</Link>
+                    </dd>
+                    <dd className="more">
+                      <Link>전체보기</Link>
+                    </dd>
+                  </dl>
                 </li>
               );
             })}

@@ -3,7 +3,7 @@ import { Link, Route, Switch, Router } from "react-router-dom";
 import "routes/webtoon_routes/weekday/Weekday.css";
 import "routes/Navigation.css";
 
-const Weekday = ({ webtoon, Nwebtoon }) => {
+const Weekday = ({ webtoon, Nwebtoon, detail }) => {
   return (
     <>
       {Navigation()}
@@ -13,7 +13,7 @@ const Weekday = ({ webtoon, Nwebtoon }) => {
           {Nwebtoon.map((singleData) => {
             return (
               <li>
-                <Link to={singleData.url}>
+                <Link to={singleData.url_to_list}>
                   <img src={singleData.img} alt="thumb7" />
                   <strong>{singleData.title}</strong>
                 </Link>
@@ -29,12 +29,12 @@ const Weekday = ({ webtoon, Nwebtoon }) => {
         <div className="mon">
           <h4>월요웹툰</h4>
           {webtoon
-            .filter((element) => element.id.includes("thm*m"))
+            .filter((element) => element.parse.includes("thm*m"))
             .map((singleData) => {
               return (
                 <li className="webtoon">
-                  <Link to={singleData.url}>
-                    <img src={singleData.img} />
+                  <Link to={singleData.url_to_list}>
+                    <img src={singleData.thumb_s} />
                   </Link>
                   <div>{singleData.title}</div>
                 </li>
@@ -44,12 +44,12 @@ const Weekday = ({ webtoon, Nwebtoon }) => {
         <div className="tue">
           <h4>화요웹툰</h4>
           {webtoon
-            .filter((element) => element.id.includes("thm*t"))
+            .filter((element) => element.parse.includes("thm*t"))
             .map((singleData) => {
               return (
                 <li className="webtoon">
-                  <Link to={singleData.url}>
-                    <img src={singleData.img} />
+                  <Link to={singleData.url_to_list}>
+                    <img src={singleData.thumb_s} />
                   </Link>
                   <div>{singleData.title}</div>
                 </li>
@@ -59,12 +59,12 @@ const Weekday = ({ webtoon, Nwebtoon }) => {
         <div className="wen">
           <h4>수요웹툰</h4>
           {webtoon
-            .filter((element) => element.id.includes("thm*w"))
+            .filter((element) => element.parse.includes("thm*w"))
             .map((singleData) => {
               return (
                 <li className="webtoon">
-                  <Link to={singleData.url}>
-                    <img src={singleData.img} />
+                  <Link to={singleData.url_to_list}>
+                    <img src={singleData.thumb_s} />
                   </Link>
                   <div>{singleData.title}</div>
                 </li>
@@ -74,12 +74,12 @@ const Weekday = ({ webtoon, Nwebtoon }) => {
         <div className="thu">
           <h4>목요웹툰</h4>
           {webtoon
-            .filter((element) => element.id.includes("thm*T"))
+            .filter((element) => element.parse.includes("thm*T"))
             .map((singleData) => {
               return (
                 <li className="webtoon">
-                  <Link to={singleData.url}>
-                    <img src={singleData.img} />
+                  <Link to={singleData.url_to_list}>
+                    <img src={singleData.thumb_s} />
                   </Link>
                   <div>{singleData.title}</div>
                 </li>
@@ -89,12 +89,12 @@ const Weekday = ({ webtoon, Nwebtoon }) => {
         <div className="fri">
           <h4>금요웹툰</h4>
           {webtoon
-            .filter((element) => element.id.includes("thm*f"))
+            .filter((element) => element.parse.includes("thm*f"))
             .map((singleData) => {
               return (
                 <li className="webtoon">
-                  <Link to={singleData.url}>
-                    <img src={singleData.img} />
+                  <Link to={singleData.url_to_list}>
+                    <img src={singleData.thumb_s} />
                   </Link>
                   <div>{singleData.title}</div>
                 </li>
@@ -104,12 +104,12 @@ const Weekday = ({ webtoon, Nwebtoon }) => {
         <div className="sat">
           <h4>토요웹툰</h4>
           {webtoon
-            .filter((element) => element.id.includes("thm*s"))
+            .filter((element) => element.parse.includes("thm*s"))
             .map((singleData) => {
               return (
                 <li className="webtoon">
-                  <Link to={singleData.url}>
-                    <img src={singleData.img} />
+                  <Link to={singleData.url_to_list}>
+                    <img src={singleData.thumb_s} />
                   </Link>
                   <div>{singleData.title}</div>
                 </li>
@@ -119,12 +119,12 @@ const Weekday = ({ webtoon, Nwebtoon }) => {
         <div className="sun">
           <h4>일요웹툰</h4>
           {webtoon
-            .filter((element) => element.id.includes("thm*S"))
+            .filter((element) => element.parse.includes("thm*S"))
             .map((singleData) => {
               return (
                 <li className="webtoon">
-                  <Link to={singleData.url}>
-                    <img src={singleData.img} />
+                  <Link to={singleData.url_to_list}>
+                    <img src={singleData.thumb_s} />
                   </Link>
                   <div>{singleData.title}</div>
                 </li>
