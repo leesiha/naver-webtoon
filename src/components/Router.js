@@ -30,7 +30,7 @@ import Saturday from "routes/webtoon_routes/weekday/Saturday";
 import Sunday from "routes/webtoon_routes/weekday/Sunday";
 import Webtoon_detail from "routes/webtoon_routes/Webtoon_detail";
 
-const AppRouter = ({ isLoggedIn, webtoon_spot, webtoon_detail }) => {
+const AppRouter = ({ isLoggedIn, daily_all, webtoon_spot, webtoon_detail }) => {
   return (
     <Router>
       <Navigation />
@@ -48,6 +48,7 @@ const AppRouter = ({ isLoggedIn, webtoon_spot, webtoon_detail }) => {
                     <>
                       <Route exact path="/webtoon/weekday">
                         <Weekday
+                          detail={daily_all}
                           webtoon={webtoon_detail}
                           Nwebtoon={webtoon_spot}
                         />
