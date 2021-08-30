@@ -3,14 +3,14 @@ import { Link, Route, Switch, Router } from "react-router-dom";
 import "routes/webtoon_routes/weekday/Weekday.css";
 import "routes/Navigation.css";
 
-const Sunday = ({ webtoon, Nwebtoon }) => {
+const Sunday = ({ webtoon, thumb_b }) => {
   return (
     <>
       {Navigation()}
       <div className="webtoon_spot2">
         <h3>일요 추천 웹툰</h3>
         <ul>
-          {Nwebtoon.map((singleData) => {
+          {thumb_b.map((singleData) => {
             return (
               <li>
                 <Link to={singleData.url}>

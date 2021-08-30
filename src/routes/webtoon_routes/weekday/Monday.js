@@ -3,7 +3,7 @@ import { Link, Route, Switch, Router } from "react-router-dom";
 import "routes/webtoon_routes/weekday/Weekday.css";
 import "routes/Navigation.css";
 
-const Monday = ({ webtoon, Nwebtoon }) => {
+const Monday = ({ webtoon, thumb_b }) => {
   const date = new Date();
   return (
     <>
@@ -16,15 +16,14 @@ const Monday = ({ webtoon, Nwebtoon }) => {
           </p>
         </h3>
         <ul>
-          {Nwebtoon.map((singleData) => {
+          {(thumb_b, webtoon).map((th, singleData) => {
             return (
               <li>
-                <Link to={singleData.url}>
-                  <img src={singleData.img} alt="thumb7" />
+                <Link to={singleData.url_to_list}>
+                  <img src={th.thumb_b} alt="thumb7" />
                   <strong>{singleData.title}</strong>
                 </Link>
                 <p className="author">{singleData.author}</p>
-                <p>{singleData.intro}</p>
               </li>
             );
           })}
@@ -38,7 +37,7 @@ const Monday = ({ webtoon, Nwebtoon }) => {
             .map((singleData) => {
               return (
                 <li>
-                  <Link to={singleData.url}>
+                  <Link to={singleData.url_to_list}>
                     <img src={singleData.thumb_s} />
                   </Link>
                   <dl>

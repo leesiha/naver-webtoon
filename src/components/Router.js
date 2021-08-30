@@ -30,7 +30,7 @@ import Saturday from "routes/webtoon_routes/weekday/Saturday";
 import Sunday from "routes/webtoon_routes/weekday/Sunday";
 import Webtoon_detail from "routes/webtoon_routes/Webtoon_detail";
 
-const AppRouter = ({ isLoggedIn, daily_all, webtoon_spot, webtoon_detail }) => {
+const AppRouter = ({ isLoggedIn, webtoon_spot, webtoon_detail }) => {
   return (
     <Router>
       <Navigation />
@@ -50,7 +50,6 @@ const AppRouter = ({ isLoggedIn, daily_all, webtoon_spot, webtoon_detail }) => {
                         <Weekday
                           webtoon={webtoon_detail}
                           Nwebtoon={webtoon_spot}
-                          detail={webtoon_detail}
                         />
                       </Route>
                       {/* <Route path="/webtoon/list" component={Webtoon_detail}>
@@ -60,46 +59,25 @@ const AppRouter = ({ isLoggedIn, daily_all, webtoon_spot, webtoon_detail }) => {
                         />
                       </Route> */}
                       <Route exact path="/webtoon/weekday/mon">
-                        <Monday
-                          webtoon={webtoon_detail}
-                          Nwebtoon={webtoon_spot}
-                        />
+                        <Monday webtoon={webtoon_detail} />
                       </Route>
                       <Route exact path="/webtoon/weekday/tue">
-                        <Tuesday
-                          webtoon={webtoon_detail}
-                          Nwebtoon={webtoon_spot}
-                        />
+                        <Tuesday webtoon={webtoon_detail} />
                       </Route>
                       <Route exact path="/webtoon/weekday/wed">
-                        <Wendnesday
-                          webtoon={webtoon_detail}
-                          Nwebtoon={webtoon_spot}
-                        />
+                        <Wendnesday webtoon={webtoon_detail} />
                       </Route>
                       <Route exact path="/webtoon/weekday/thu">
-                        <Thursday
-                          webtoon={webtoon_detail}
-                          Nwebtoon={webtoon_spot}
-                        />
+                        <Thursday webtoon={webtoon_detail} />
                       </Route>
                       <Route exact path="/webtoon/weekday/fri">
-                        <Friday
-                          webtoon={webtoon_detail}
-                          Nwebtoon={webtoon_spot}
-                        />
+                        <Friday webtoon={webtoon_detail} />
                       </Route>
                       <Route exact path="/webtoon/weekday/sat">
-                        <Saturday
-                          webtoon={webtoon_detail}
-                          Nwebtoon={webtoon_spot}
-                        />
+                        <Saturday webtoon={webtoon_detail} />
                       </Route>
                       <Route exact path="/webtoon/weekday/sun">
-                        <Sunday
-                          webtoon={webtoon_detail}
-                          Nwebtoon={webtoon_spot}
-                        />
+                        <Sunday webtoon={webtoon_detail} />
                       </Route>
                     </>
                     <>

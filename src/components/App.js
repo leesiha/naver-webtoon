@@ -7,16 +7,12 @@ import "routes/Navigation.css";
 function App() {
   const [init, setInit] = useState("false");
   const [isLoggedIn, setIsLoggedIn] = useState("false");
-  const [daily_all, setDaily_all] = useState([]);
   const [webtoon_spot, setWebtoon_spot] = useState([]);
   const [webtoon_detail, setWebtoon_detail] = useState([]);
 
   const getWebtoons = async () => {
     await axios
       .all([
-        axios.get(
-          "https://raw.githubusercontent.com/leesiha/naver-webtoon/main/list_area%20daily_all.json"
-        ),
         axios.get(
           "https://raw.githubusercontent.com/leesiha/naver-webtoon/main/webtoon_spot2.json"
         ),
@@ -26,7 +22,6 @@ function App() {
       ])
       .then(
         axios.spread((res1, res2, res3) => {
-          setDaily_all(res1.data);
           setWebtoon_spot(res2.data);
           setWebtoon_detail(res3.data);
         })
@@ -56,7 +51,6 @@ function App() {
       {init ? (
         <AppRouter
           isLoggedIn={isLoggedIn}
-          daily_all={daily_all}
           webtoon_spot={webtoon_spot}
           webtoon_detail={webtoon_detail}
         ></AppRouter>
