@@ -21,7 +21,7 @@ function App() {
         ),
       ])
       .then(
-        axios.spread((res1, res2, res3) => {
+        axios.spread((res2, res3) => {
           setWebtoon_spot(res2.data);
           setWebtoon_detail(res3.data);
         })

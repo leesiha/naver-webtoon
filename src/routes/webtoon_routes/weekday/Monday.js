@@ -16,11 +16,11 @@ const Monday = ({ webtoon, thumb_b }) => {
           </p>
         </h3>
         <ul>
-          {(thumb_b, webtoon).map((th, singleData) => {
+          {webtoon.map((singleData) => {
             return (
               <li>
                 <Link to={singleData.url_to_list}>
-                  <img src={th.thumb_b} alt="thumb7" />
+                  <img src={singleData.thumb_b} alt="thumb7" />
                   <strong>{singleData.title}</strong>
                 </Link>
                 <p className="author">{singleData.author}</p>
