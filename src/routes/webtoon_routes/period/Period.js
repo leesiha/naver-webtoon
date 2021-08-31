@@ -3,7 +3,12 @@ import { Link } from "react-router-dom";
 import "routes/Navigation.css";
 
 const Period = () => {
-  return <>{Navigation()}</>;
+  return (
+    <>
+      {Navigation()}
+      <div className="view_type"></div>
+    </>
+  );
 };
 
 const Navigation = () => (

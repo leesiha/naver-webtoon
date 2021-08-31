@@ -82,17 +82,17 @@ const AppRouter = ({ isLoggedIn, webtoon_spot, webtoon_detail }) => {
                     </>
                     <>
                       <Route path="/webtoon/genre">
-                        <Genre />
+                        <Genre webtoon={webtoon_detail} />
                       </Route>
                     </>
                     <>
                       <Route path="/webtoon/creation">
-                        <Creation />
+                        <Creation webtoon={webtoon_detail} />
                       </Route>
                     </>
                     <>
                       <Route path="/webtoon/artist">
-                        <Artist />
+                        <Artist webtoon={webtoon_detail} />
                       </Route>
                     </>
                     <>

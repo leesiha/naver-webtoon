@@ -3,7 +3,7 @@ import { Link, Route, Switch, Router } from "react-router-dom";
 import "routes/webtoon_routes/weekday/Weekday.css";
 import "routes/Navigation.css";
 
-const Weekday = ({ webtoon, Nwebtoon, detail }) => {
+const Weekday = ({ webtoon, Nwebtoon }) => {
   const webtoonSpot = Nwebtoon.map((singleData) => {
     return (
       <li>

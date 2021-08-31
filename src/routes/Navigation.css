@@ -1,3 +1,50 @@
+body,
+input,
+textarea,
+select,
+button,
+table {
+  font-size: 12px;
+  font-family: Arial, "나눔고딕", NanumGothic, -apple-system, BlinkMacSystemFont,
+    "Apple SD Gothic Neo", "맑은고딕", MalgunGothic, "돋움", Dotum, Sans-serif;
+  color: #434343;
+}
+div,
+p,
+span,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+ul,
+ol,
+li,
+dl,
+dt,
+dd,
+table,
+tr,
+th,
+td,
+form,
+fieldset,
+legend,
+select,
+textarea,
+label {
+  margin: 0;
+  padding: 0;
+}
+ul,
+ol,
+li,
+dl,
+dt,
+dd {
+  list-style: none;
+}
 body {
   margin: 0px;
 }
@@ -50,7 +97,6 @@ h1 {
   font-weight: bold;
 }
 .bar {
-  float: left;
   overflow: hidden;
   width: 1px;
   height: 13px;
@@ -64,6 +110,26 @@ h1 {
   font-weight: bold;
   margin-top: 3px;
   color: hsl(0, 0%, 50%);
+}
+
+.webtoon .view_type {
+  position: relative;
+  padding-bottom: 8px;
+  margin: 22px 0 0;
+  border-bottom: 1px solid #eaeaea;
+  zoom: 1;
+}
+.view_type {
+  overflow: hidden;
+  margin: 12px 0;
+}
+.view_type .sub_tit {
+  float: left;
+  padding: 0;
+  font-size: 16px;
+  line-height: 18px;
+  color: #222;
+  margin: 0;
 }
 
 .menu {
@@ -137,6 +203,39 @@ div.webtoon h3 {
   float: left;
   padding: 0 7px;
 }
+.snb {
+  margin: 16px 0 11px;
+  border-bottom: 1px solid #e5e5e5;
+}
+.snb ul.spot {
+  display: table;
+  width: 100%;
+  text-align: center;
+}
+.snb ul.spot li {
+  display: table-cell;
+}
+.snb ul li .bar {
+  display: inline-block;
+  width: 1px;
+  height: 13px;
+  background: #ced2d6;
+  margin: 2px 0 0 12px;
+  vertical-align: top;
+}
+.category_tab_year {
+  display: table;
+  width: 100%;
+  text-align: center;
+  border-bottom: 1px solid #e5e5e5;
+  margin-top: 20px;
+}
+.category_tab_year li {
+  width: 52px;
+  letter-spacing: 0;
+  display: table-cell;
+}
+
 div.webtoon ul li.on a {
   font-weight: bold;
   color: #00c85e;
