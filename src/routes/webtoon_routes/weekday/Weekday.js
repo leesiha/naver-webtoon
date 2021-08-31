@@ -4,24 +4,27 @@ import "routes/webtoon_routes/weekday/Weekday.css";
 import "routes/Navigation.css";
 
 const Weekday = ({ webtoon, Nwebtoon, detail }) => {
+  const webtoonSpot = Nwebtoon.map((singleData) => {
+    return (
+      <li>
+        <Link to={singleData.url_to_list}>
+          <img src={singleData.thumb_b} alt="thumb7" />
+          <strong>{singleData.title}</strong>
+        </Link>
+        <p className="author">{singleData.author}</p>
+        <p>{singleData.intro.slice(0, 39)}...</p>
+      </li>
+    );
+  });
   return (
     <>
       {Navigation()}
       <div className="webtoon_spot2">
         <h3 className="sub_tit">이달의 신규 웹툰</h3>
         <ul>
-          {Nwebtoon.map((singleData) => {
-            return (
-              <li>
-                <Link to={singleData.url_to_list}>
-                  <img src={singleData.img} alt="thumb7" />
-                  <strong>{singleData.title}</strong>
-                </Link>
-                <p className="author">{singleData.author}</p>
-                <p>{singleData.intro}</p>
-              </li>
-            );
-          })}
+          {randomItem(webtoonSpot)}
+          {randomItem(webtoonSpot)}
+          {randomItem(webtoonSpot)}
         </ul>
       </div>
       <h3>요일별 전체 웹툰</h3>
@@ -167,4 +170,9 @@ const Navigation = () => {
   );
 };
 
+function randomItem(a) {
+  for (let i = 0; i < 3; i++) {
+    return a[Math.floor(Math.random() * a.length)];
+  }
+}
 export default Weekday;

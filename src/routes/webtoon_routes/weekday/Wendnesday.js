@@ -3,25 +3,30 @@ import { Link, Route, Switch, Router } from "react-router-dom";
 import "routes/webtoon_routes/weekday/Weekday.css";
 import "routes/Navigation.css";
 
-const Wendnesday = ({ webtoon, thumb_b }) => {
+const Wendnesday = ({ webtoon }) => {
+  webtoon = webtoon.filter((element) => element.parse.includes("thm*w"));
+  const webtoonSpot = webtoon.map((singleData) => {
+    return (
+      <li>
+        <Link to={singleData.url_to_list}>
+          <img src={singleData.thumb_b} alt="thumb7" />
+          <strong>{singleData.title}</strong>
+        </Link>
+        <p className="author">{singleData.author}</p>
+        <p>{singleData.intro.slice(0, 39)}...</p>
+      </li>
+    );
+  });
+
   return (
     <>
       {Navigation()}
       <div className="webtoon_spot2">
         <h3>수요 추천 웹툰</h3>
         <ul>
-          {thumb_b.map((singleData) => {
-            return (
-              <li>
-                <a href={singleData.url}>
-                  <img src={singleData.img} alt="thumb7" />
-                  <strong>{singleData.title}</strong>
-                </a>
-                <p className="author">{singleData.author}</p>
-                <p>{singleData.intro}</p>
-              </li>
-            );
-          })}
+          {randomItem(webtoonSpot)}
+          {randomItem(webtoonSpot)}
+          {randomItem(webtoonSpot)}
         </ul>
       </div>
       <h3>수요 전체 웹툰</h3>
@@ -85,5 +90,9 @@ const Navigation = () => {
     </ul>
   );
 };
+
+function randomItem(a) {
+  return a[Math.floor(Math.random() * a.length)];
+}
 
 export default Wendnesday;
