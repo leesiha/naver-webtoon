@@ -9,10 +9,14 @@ function App() {
   const [isLoggedIn, setIsLoggedIn] = useState("false");
   const [webtoon_spot, setWebtoon_spot] = useState([]);
   const [webtoon_detail, setWebtoon_detail] = useState([]);
+  const [webtoon_finish, setWebtoon_finish] = useState([]);
 
   const getWebtoons = async () => {
     await axios
       .all([
+        axios.get(
+          "https://raw.githubusercontent.com/leesiha/naver-webtoon/main/webtoon_finish.json"
+        ),
         axios.get(
           "https://raw.githubusercontent.com/leesiha/naver-webtoon/main/webtoon_spot2.json"
         ),
@@ -21,7 +25,8 @@ function App() {
         ),
       ])
       .then(
-        axios.spread((res2, res3) => {
+        axios.spread((res1, res2, res3) => {
+          setWebtoon_finish(res1.data);
           setWebtoon_spot(res2.data);
           setWebtoon_detail(res3.data);
         })
@@ -53,6 +58,7 @@ function App() {
           isLoggedIn={isLoggedIn}
           webtoon_spot={webtoon_spot}
           webtoon_detail={webtoon_detail}
+          webtoon_finish={webtoon_finish}
         ></AppRouter>
       ) : (
         "Initializing..."

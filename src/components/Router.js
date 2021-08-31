@@ -30,7 +30,12 @@ import Saturday from "routes/webtoon_routes/weekday/Saturday";
 import Sunday from "routes/webtoon_routes/weekday/Sunday";
 import Webtoon_detail from "routes/webtoon_routes/Webtoon_detail";
 
-const AppRouter = ({ isLoggedIn, webtoon_spot, webtoon_detail }) => {
+const AppRouter = ({
+  isLoggedIn,
+  webtoon_spot,
+  webtoon_detail,
+  webtoon_finish,
+}) => {
   return (
     <Router>
       <Navigation />
@@ -82,17 +87,26 @@ const AppRouter = ({ isLoggedIn, webtoon_spot, webtoon_detail }) => {
                     </>
                     <>
                       <Route path="/webtoon/genre">
-                        <Genre webtoon={webtoon_detail} />
+                        <Genre
+                          webtoon={webtoon_detail}
+                          finish={webtoon_finish}
+                        />
                       </Route>
                     </>
                     <>
                       <Route path="/webtoon/creation">
-                        <Creation webtoon={webtoon_detail} />
+                        <Creation
+                          webtoon={webtoon_detail}
+                          finish={webtoon_finish}
+                        />
                       </Route>
                     </>
                     <>
                       <Route path="/webtoon/artist">
-                        <Artist webtoon={webtoon_detail} />
+                        <Artist
+                          webtoon={webtoon_detail}
+                          finish={webtoon_finish}
+                        />
                       </Route>
                     </>
                     <>
@@ -107,7 +121,7 @@ const AppRouter = ({ isLoggedIn, webtoon_spot, webtoon_detail }) => {
                     </>
                     <>
                       <Route exact path="/webtoon/finish">
-                        <Finish />
+                        <Finish finish={webtoon_finish} />
                       </Route>
                     </>
                   </div>

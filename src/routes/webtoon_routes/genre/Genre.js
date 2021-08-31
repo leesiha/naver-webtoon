@@ -2,37 +2,61 @@ import React from "react";
 import { Link } from "react-router-dom";
 import "routes/Navigation.css";
 
-const Genre = ({ webtoon }) => {
+const Genre = ({ webtoon, finish }) => {
+  webtoon = webtoon.filter((element) => element.genre.includes("에피소드"));
+  finish = finish.filter((element) => element.genre.includes("에피소드"));
+  let arr;
   return (
     <>
       {Navigation()}
       <div className="view_type">
-        <h3 className="sub_tit">에피소드 웹툰</h3>
+        <h3 className="sub_tit">
+          에피소드 웹툰
+          <em>총 {arr}개</em>
+        </h3>
       </div>
       <div className="list_area">
         <div className="img_list">
-          {webtoon
-            .filter((element) => element.genre.includes("에피소드"))
-            .map((singleData) => {
-              return (
-                <li>
-                  <Link to={singleData.url_to_list}>
-                    <img src={singleData.thumb_s} />
-                  </Link>
-                  <dl>
-                    <dt>
-                      <Link>{singleData.title}</Link>
-                    </dt>
-                    <dd className="desc">
-                      <Link>{singleData.author}</Link>
-                    </dd>
-                    <dd className="more">
-                      <Link>전체보기</Link>
-                    </dd>
-                  </dl>
-                </li>
-              );
-            })}
+          {webtoon.map((singleData) => {
+            return (
+              <li>
+                <Link to={singleData.url_to_list}>
+                  <img src={singleData.thumb_s} />
+                </Link>
+                <dl>
+                  <dt>
+                    <Link>{singleData.title}</Link>
+                  </dt>
+                  <dd className="desc">
+                    <Link>{singleData.author}</Link>
+                  </dd>
+                  <dd className="more">
+                    <Link>전체보기</Link>
+                  </dd>
+                </dl>
+              </li>
+            );
+          })}
+          {finish.map((singleData) => {
+            return (
+              <li>
+                <Link to={singleData.url_to_list}>
+                  <img src={singleData.thumb_s} />
+                </Link>
+                <dl>
+                  <dt>
+                    <Link>{singleData.title}</Link>
+                  </dt>
+                  <dd className="desc">
+                    <Link>{singleData.author}</Link>
+                  </dd>
+                  <dd className="more">
+                    <Link>전체보기</Link>
+                  </dd>
+                </dl>
+              </li>
+            );
+          })}
         </div>
       </div>
     </>
