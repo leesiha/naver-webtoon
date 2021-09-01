@@ -45,22 +45,63 @@ dt,
 dd {
   list-style: none;
 }
+#header #gnb {
+  position: absolute;
+  top: 15px;
+  right: 1px;
+  z-index: 500;
+}
+#header {
+  position: relative;
+  width: 960px;
+  margin: 0 auto;
+  padding: 0 10px;
+}
+#snb_wrap {
+  height: 37px;
+  padding: 10px 0 8px;
+}
+.new,
+.finish {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
 body {
-  margin: 0px;
+  height: 100%;
+  margin: 0;
+  background: #fff;
+  text-align: center;
 }
 a {
   text-decoration: none;
   color: black;
-}
-ul {
-  margin: 0px;
-  padding: 0px;
 }
 .end_page {
   flex-wrap: nowrap;
   height: 300px;
   margin: 0 auto;
   text-align: left;
+}
+#content {
+  float: left;
+  position: relative;
+  width: 694px;
+  padding-left: 10px;
+}
+#wrap {
+  position: relative;
+  height: 100%;
+  margin: 0 auto;
+  text-align: left;
+}
+#container {
+  clear: both;
+  position: relative;
+  width: 980px;
+  min-height: 100%;
+  padding: 8px 0 100px;
+  margin: 0 auto;
 }
 
 [class^="Ntxt"] {
@@ -70,12 +111,6 @@ ul {
   height: fit-content;
 }
 
-.header {
-  display: flex;
-  width: 960px;
-  margin: 0 auto;
-  padding: 10px 10px 8px 10px;
-}
 h1 {
   position: relative;
   display: flex;
@@ -167,14 +202,6 @@ h1 {
   font-size: 13px;
 }
 
-div.container {
-  clear: both;
-  position: relative;
-  width: 980px;
-  min-height: 100%;
-  padding: 8px 0 100px;
-  margin: 0 auto;
-}
 div.webtoon {
   float: left;
   position: relative;
@@ -207,6 +234,18 @@ div.webtoon h3 {
   margin: 16px 0 11px;
   border-bottom: 1px solid #e5e5e5;
 }
+.snb ul.my {
+  display: table;
+  width: 100%;
+  text-align: center;
+}
+.snb ul.my li:first-child {
+  margin-left: 0;
+}
+.snb ul.my li {
+  float: left;
+  margin-left: 27px;
+}
 .snb ul.spot {
   display: table;
   width: 100%;
@@ -214,6 +253,12 @@ div.webtoon h3 {
 }
 .snb ul.spot li {
   display: table-cell;
+}
+.snb ul li a {
+  display: inline-block;
+  font-size: 13px;
+  color: #737373;
+  padding: 0 2px 8px;
 }
 .snb ul li .bar {
   display: inline-block;

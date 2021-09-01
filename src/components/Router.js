@@ -28,7 +28,7 @@ import Thursday from "routes/webtoon_routes/weekday/Thursday";
 import Friday from "routes/webtoon_routes/weekday/Friday";
 import Saturday from "routes/webtoon_routes/weekday/Saturday";
 import Sunday from "routes/webtoon_routes/weekday/Sunday";
-import Webtoon_detail from "routes/webtoon_routes/Webtoon_detail";
+import Webtoon_list from "routes/Webtoon_list";
 
 const AppRouter = ({
   isLoggedIn,
@@ -38,9 +38,9 @@ const AppRouter = ({
 }) => {
   return (
     <Router>
-      <Navigation />
       <Switch>
         <>
+          <Navigation isLoggedIn={isLoggedIn} />
           <Route exact path="/">
             <Home />
           </Route>
@@ -48,8 +48,8 @@ const AppRouter = ({
             <>
               <Route path="/webtoon">
                 <Navigation2 />
-                <div className="container">
-                  <div className="webtoon">
+                <div id="container">
+                  <div id="content" className="webtoon">
                     <>
                       <Route exact path="/webtoon/weekday">
                         <Weekday
@@ -57,6 +57,12 @@ const AppRouter = ({
                           Nwebtoon={webtoon_spot}
                         />
                       </Route>
+                      {/* <Route path="/webtoon/list">
+                        <Webtoon_list
+                          webtoon={webtoon_detail}
+                          Nwebtoon={webtoon_spot}
+                        />
+                      </Route> */}
                       {/* <Route path="/webtoon/list" component={Webtoon_detail}>
                         <Webtoon_detail
                           detail={webtoon_detail}
@@ -135,7 +141,13 @@ const AppRouter = ({
           <Route path="/challenge">
             <Challenge />
           </Route>
-          <Route path="/mypage">{isLoggedIn ? <Mypage /> : <Auth />}</Route>
+          <Route path="/mypage">
+            {isLoggedIn ? <Mypage /> : <Redirect to="/login" />}
+          </Route>
+          <Route exact path="/login">
+            <Auth />
+            {isLoggedIn ? <Redirect to="/mypage" /> : ""}
+          </Route>
         </>
       </Switch>
     </Router>

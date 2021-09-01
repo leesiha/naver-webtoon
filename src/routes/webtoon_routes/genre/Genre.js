@@ -1,18 +1,19 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import "routes/webtoon_routes/weekday/Weekday.css";
 import "routes/Navigation.css";
 
 const Genre = ({ webtoon, finish }) => {
   webtoon = webtoon.filter((element) => element.genre.includes("에피소드"));
   finish = finish.filter((element) => element.genre.includes("에피소드"));
-  let arr;
+  let arr = Object.keys(webtoon).length + Object.keys(finish).length;
   return (
     <>
       {Navigation()}
       <div className="view_type">
         <h3 className="sub_tit">
           에피소드 웹툰
-          <em>총 {arr}개</em>
+          {/* <em>총 {arr}개</em> */}
         </h3>
       </div>
       <div className="list_area">
@@ -41,7 +42,10 @@ const Genre = ({ webtoon, finish }) => {
             return (
               <li>
                 <Link to={singleData.url_to_list}>
-                  <img src={singleData.thumb_s} />
+                  <a>
+                    <img src={singleData.thumb_s} />
+                    <img className="finish" src={singleData.finish_img} />
+                  </a>
                 </Link>
                 <dl>
                   <dt>

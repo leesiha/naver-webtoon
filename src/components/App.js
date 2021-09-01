@@ -47,12 +47,11 @@ function App() {
   }, []);
 
   const logOut = () => {
-    setIsLoggedIn((prev) => !prev);
+    authService.signOut();
   };
 
   return (
     <div id="wrap" className="end_page">
-      {isLoggedIn && <input type="submit" value="Log out" onClick={logOut} />}
       {init ? (
         <AppRouter
           isLoggedIn={isLoggedIn}
